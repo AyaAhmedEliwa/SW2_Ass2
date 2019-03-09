@@ -30,6 +30,26 @@ public class MessageTransmitter extends Thread{
             Logger.getLogger(MessageTransmitter.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public synchronized void waitMethod() throws IOException {
+ 	int num=0;
+		while (num<10) 
+                {
+                    Socket s = new Socket(hostname, port);
+                      
+                      double x = Math.random()*100+1;
+                      message="sending fake data "+x+"";
+                    
+                       s.getOutputStream().write(message.getBytes());
+                       s.close();
+			//System.out.println("always running program ==> " + Calendar.getInstance().getTime());
+			try {
+				this.wait(2000);
+			} catch (InterruptedException e) {
+ 
+				e.printStackTrace();
+			}
+		}
+}
     
     
 }
