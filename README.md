@@ -1,5 +1,6 @@
 # SW2_Ass2
-Running scenario you will put the port number for you and for any one you want to
+Our application is a small application on peer to peer architecture.
+Running scenario: you will put the port number for you and for any one you want to
 connect with him (at the space specified for this) and click on connect once you
 click on connect button you are connected. Then you can write message to the
 second user (at the space specified for this) and click on send button (you in this
